@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qJc-AD-pkf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qJc-AD-pkf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -31,9 +31,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFk-hW-meh">
-                                <rect key="frame" x="40" y="556" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFk-hW-meh">
+                                <rect key="frame" x="20" y="556" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.115743586" green="0.4937657828" blue="0.22675590349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Gpb-ny-w8e"/>
+                                    <constraint firstAttribute="height" constant="30" id="c5o-5V-8y1"/>
+                                </constraints>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -58,6 +62,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gFk-hW-meh" firstAttribute="leading" secondItem="hzn-RE-2Af" secondAttribute="leading" constant="20" id="3F2-kL-GyA"/>
+                            <constraint firstAttribute="trailing" secondItem="qJc-AD-pkf" secondAttribute="trailing" id="E0M-JV-8zf"/>
+                            <constraint firstItem="oTJ-xZ-h78" firstAttribute="top" secondItem="qJc-AD-pkf" secondAttribute="bottom" id="TEk-kT-yfF"/>
+                            <constraint firstItem="oTJ-xZ-h78" firstAttribute="top" secondItem="gFk-hW-meh" secondAttribute="bottom" constant="14" id="eTa-Av-5FS"/>
+                            <constraint firstItem="qJc-AD-pkf" firstAttribute="leading" secondItem="hzn-RE-2Af" secondAttribute="leading" id="fmr-2A-ggS"/>
+                            <constraint firstItem="qJc-AD-pkf" firstAttribute="top" secondItem="hzn-RE-2Af" secondAttribute="top" id="iPZ-mg-Q2J"/>
                             <constraint firstItem="oTJ-xZ-h78" firstAttribute="top" secondItem="PFf-J3-gUU" secondAttribute="bottom" constant="20" id="sCG-Ag-GeC"/>
                             <constraint firstAttribute="trailing" secondItem="PFf-J3-gUU" secondAttribute="trailing" constant="20" id="vmD-md-tMP"/>
                         </constraints>
@@ -86,9 +96,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-sj-RNm">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tvs-LF-lqL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-sj-RNm">
                                 <rect key="frame" x="52" y="536" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.16059723149999999" green="0.68511284719999999" blue="0.3146297052" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2u8-Jk-5ky"/>
+                                    <constraint firstAttribute="width" constant="46" id="ESs-iT-dhk"/>
+                                </constraints>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
@@ -96,9 +113,13 @@
                                     <action selector="addButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qH9-yE-510"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eui-TO-vUi">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eui-TO-vUi">
                                 <rect key="frame" x="525" y="536" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.16059723149999999" green="0.68511284719999999" blue="0.3146297052" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3nz-Lq-1Gj"/>
+                                    <constraint firstAttribute="width" constant="46" id="QNJ-hp-r4Q"/>
+                                </constraints>
                                 <state key="normal" title="data">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -106,11 +127,22 @@
                                     <action selector="dataButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQa-P8-lnl"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tvs-LF-lqL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tvs-LF-lqL" secondAttribute="bottom" id="0lL-Gl-YCH"/>
+                            <constraint firstAttribute="trailing" secondItem="Eui-TO-vUi" secondAttribute="trailing" constant="20" id="1yv-x3-enf"/>
+                            <constraint firstItem="h3z-sj-RNm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="MZn-OQ-4nm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Eui-TO-vUi" secondAttribute="bottom" constant="34" id="RSU-om-mUj"/>
+                            <constraint firstAttribute="trailing" secondItem="Tvs-LF-lqL" secondAttribute="trailing" id="bV7-3O-xP3"/>
+                            <constraint firstItem="Tvs-LF-lqL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dVW-e0-n3s"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tvs-LF-lqL" secondAttribute="bottom" id="f2U-1L-hTI"/>
+                            <constraint firstItem="Tvs-LF-lqL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i0h-EY-NL7"/>
+                            <constraint firstAttribute="trailing" secondItem="Tvs-LF-lqL" secondAttribute="trailing" id="oRj-Q2-YVS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h3z-sj-RNm" secondAttribute="bottom" constant="34" id="vzg-ic-GQu"/>
+                            <constraint firstItem="Tvs-LF-lqL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wbQ-jL-PN0"/>
+                            <constraint firstItem="Tvs-LF-lqL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xHf-GU-8im"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JNv-Ip-KdO"/>
                     <connections>
