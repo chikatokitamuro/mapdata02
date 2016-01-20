@@ -112,6 +112,7 @@
     NSLog(@"位置情報が更新されました");
 }*/
 
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     CLLocation *newLocations = locations.firstObject;
     self.longitude = newLocations.coordinate.longitude;
