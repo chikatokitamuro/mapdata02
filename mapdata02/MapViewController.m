@@ -102,13 +102,22 @@
 }
 
 // 位置情報が取得成功した場合にコールされる
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+/*- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     // 位置情報更新
     self.longitude = newLocation.coordinate.longitude;
     self.latitude = newLocation.coordinate.latitude;
     
     self.isLocation = YES;
     
+    NSLog(@"位置情報が更新されました");
+}*/
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    CLLocation *newLocations = locations.firstObject;
+    self.longitude = newLocations.coordinate.longitude;
+    self.latitude = newLocations.coordinate.latitude;
+    
+    self.isLocation = YES;
     NSLog(@"位置情報が更新されました");
 }
 
