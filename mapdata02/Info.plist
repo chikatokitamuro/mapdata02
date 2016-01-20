@@ -26,6 +26,8 @@
 	<true/>
 	<key>NSLocationWhenInUsageDescription</key>
 	<string>現在位置を表示するために使用</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
