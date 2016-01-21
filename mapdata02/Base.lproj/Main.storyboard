@@ -18,34 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFk-hW-meh">
-                                <rect key="frame" x="20" y="556" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.115743586" green="0.4937657828" blue="0.22675590349999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="Gpb-ny-w8e"/>
-                                    <constraint firstAttribute="height" constant="30" id="c5o-5V-8y1"/>
-                                </constraints>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButtonAction:" destination="XcR-Uj-gcz" eventType="touchUpInside" id="zRk-ki-r54"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFf-J3-gUU">
-                                <rect key="frame" x="534" y="550" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.115743586" green="0.4937657828" blue="0.22675590349999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5Iz-B9-tu2"/>
-                                    <constraint firstAttribute="width" constant="46" id="sso-Vg-5zT"/>
-                                </constraints>
-                                <state key="normal" title="Edit">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="editButtonAction:" destination="XcR-Uj-gcz" eventType="touchUpInside" id="cCj-8G-emW"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qJc-AD-pkf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,6 +40,34 @@
                                     <outlet property="delegate" destination="XcR-Uj-gcz" id="qNM-oc-YrZ"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFf-J3-gUU">
+                                <rect key="frame" x="534" y="550" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.115743586" green="0.4937657828" blue="0.22675590349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Iz-B9-tu2"/>
+                                    <constraint firstAttribute="width" constant="46" id="sso-Vg-5zT"/>
+                                </constraints>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="editButtonAction:" destination="XcR-Uj-gcz" eventType="touchUpInside" id="cCj-8G-emW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFk-hW-meh">
+                                <rect key="frame" x="20" y="556" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.115743586" green="0.4937657828" blue="0.22675590349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Gpb-ny-w8e"/>
+                                    <constraint firstAttribute="height" constant="30" id="c5o-5V-8y1"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="XcR-Uj-gcz" eventType="touchUpInside" id="zRk-ki-r54"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -107,9 +107,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tvs-LF-lqL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-sj-RNm">
                                 <rect key="frame" x="20" y="536" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.16059723149999999" green="0.68511284719999999" blue="0.3146297052" alpha="1" colorSpace="calibratedRGB"/>
@@ -138,6 +135,9 @@
                                     <action selector="dataButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQa-P8-lnl"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tvs-LF-lqL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
